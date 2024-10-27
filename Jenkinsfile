@@ -24,7 +24,7 @@ pipeline {
                     // Remove existing container if it exists
                     bat "docker rm -f recipe-app-conntainer || echo 'No existing container to remove.'"
                     // Run the Docker container with the new image
-                    bat "docker run -d --name recipe-app-container -p 8000:8000 django-app:%BUILD_NUMBER%"
+                    bat "docker run -d --name recipe-app-container -p 8000:8000 recipe-app:%BUILD_NUMBER%"
                 }
             }
         }
